@@ -65,6 +65,10 @@ header {
 }
 .btn_hebergement,
 .btn_activites {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0;
   height: 35px;
   border: 0;
 }
@@ -201,12 +205,16 @@ form {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
   width: 132px;
   height: 100%;
   border: none;
   background-color: #0065fc;
   color: white;
-  font-size: 14px;
   cursor: pointer;
   border-radius: 0 15px 15px 0;
 }
@@ -529,7 +537,6 @@ a {
 
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Le code ci-dessous correspond à la version responsive uniquement //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-
 /****** Media queries ***********/
 /* Big devices (desktop, less than 1440px) */
 @media (max-width: 1439.98px) {
@@ -659,6 +666,10 @@ a {
   .menu {
     width: 100%;
   }
+  .btn_activites,
+  .btn_hebergement {
+    align-items: center;
+  }
   .menu .buttons {
     width: 100%;
     align-items: flex-start;
@@ -667,16 +678,12 @@ a {
     flex: 1;
     border-bottom: 2px solid #f2f2f2;
   }
-  .menu button p {
-    margin: 0;
-    margin-bottom: 10px;
-  }
   .menu button:active,
   .menu button:focus {
     border: none;
     border-bottom: 2px solid #0065fc;
   }
-  .info-group{
+  .info-group {
     padding: 0 20px;
   }
   .headline h2 {
@@ -694,93 +701,93 @@ a {
     height: 24px;
     width: 24px;
   }
-  .hebergements-and-populaires{
+  .hebergements-and-populaires {
     flex-direction: column-reverse;
     height: 2020px;
   }
 
-  .hebergements-and-populaires section{
+  .hebergements-and-populaires section {
     border-radius: 0;
   }
 
-  .populaires{
+  .populaires {
     height: 569px;
     flex-direction: column;
     margin: 0;
   }
-  .populaires-cards{
+  .populaires-cards {
     flex-direction: column;
   }
-  .hebergements-and-populaires .hebergements{
+  .hebergements-and-populaires .hebergements {
     background-color: white;
   }
-  .populaires-cards a{
+  .populaires-cards a {
     width: calc(100% - 10px);
   }
-  .populaires-cards .card{
+  .populaires-cards .card {
     margin-top: 15px;
     width: 100%;
   }
 
-  .hebergements{
+  .hebergements {
     height: 1505px;
-    justify-content:space-between;
+    justify-content: space-between;
   }
-  .hebergements-cards{
-  height: 1318.5px;
-  display: flex;
-  flex-direction: column;
+  .hebergements-cards {
+    height: 1318.5px;
+    display: flex;
+    flex-direction: column;
   }
-  .hebergements-cards a{
+  .hebergements-cards a {
     height: 207.5px;
   }
-  .activites{
+  .activites {
     height: 905px;
     margin: 0;
   }
-  .activites-cards{
+  .activites-cards {
     flex-direction: column;
     height: 845px;
   }
-  .activites-cards a{
+  .activites-cards a {
     height: 200px;
     width: 100%;
   }
-  .activites-cards img{
+  .activites-cards img {
     height: 70.5%;
   }
 
-
-@media (max-width: 435px){
-  .info-group {
-    height: 432px;
-    margin-top: 0;
+  @media (max-width: 435px) {
+    .info-group {
+      height: 432px;
+      margin-top: 0;
+    }
+    .headline {
+      height: 79px;
+      flex-wrap: wrap;
+    }
+    .searchbar {
+      width: 100%;
+    }
+    form {
+      width: calc(100% - 49px);
+    }
+    form .searchBtn-container {
+      border-radius: 0 15px 15px 0;
+      border-top: solid 1px #f2f2f2;
+      border-bottom: solid 1px #f2f2f2;
+    }
+    form .search-button {
+      width: 49px;
+      border-radius: 15px;
+      filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.4));
+    }
+    form span {
+      display: none;
+    }
+    .search-button i {
+      display: block;
+    }
   }
-  .headline {
-    height: 79px;
-    flex-wrap: wrap;
-  }
-  .searchbar{
-    width: 100%;
-  }
-  form {
-    width: calc(100% - 49px);
-  }
-  form .searchBtn-container {
-    border-radius: 0 15px 15px 0;
-    border-top: solid 1px #f2f2f2;
-    border-bottom: solid 1px #f2f2f2;
-  }
-  form .search-button {
-    width: 49px;
-    border-radius: 15px;
-    filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.4));
-  }
-  form h3 {
-    display: none;
-  }
-  .search-button i {
-    display: block;
-  }
-
 }
+
